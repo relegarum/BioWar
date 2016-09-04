@@ -1,0 +1,30 @@
+# Project: SDLWin
+# Makefile created by Dev-C++ 4.9.9.2
+
+CPP  = g++.exe
+CC   = gcc.exe
+WINDRES = windres.exe
+RES  = 
+OBJ  = test.o $(RES)
+LINKOBJ  = test.o $(RES)
+LIBS =  -L"C:/Dev-Cpp_Lib/SDL-1.2.11/lib" -L"C:/Dev-Cpp_Lib/SDL-1.2.11/bin" -lmingw32 -lSDLmain -lSDL -lSDL_image -lSDL_ttf -lSDL_mixer -mwindows  
+INCS =  -I"C:/Dev-Cpp_Lib/SDL-1.2.11/include" 
+CXXINCS =  -I"C:/Dev-Cpp_Lib/SDL-1.2.11/include"  -I"C:/Dev-Cpp_Lib/SDL_image-1.2.5"  -I"C:/Dev-Cpp_Lib/SDL_ttf-2.0.9/include"  -I"C:/Dev-Cpp_Lib/SDL_mixer-1.2.7" 
+BIN  = SDLWin.exe
+CXXFLAGS = $(CXXINCS)  
+CFLAGS = $(INCS)  
+RM = rm -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before SDLWin.exe all-after
+
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o "SDLWin.exe" $(LIBS)
+
+test.o: test.cpp C:/Dev-Cpp_Lib/SDL-1.2.11/include/SDL.h   C:/Dev-Cpp_Lib/SDL-1.2.11/include/SDL_main.h   C:/Dev-Cpp_Lib/SDL-1.2.11/include/SDL_stdinc.h   C:/Dev-Cpp_Lib/SDL-1.2.11/include/SDL_config.h   C:/Dev-Cpp_Lib/SDL-1.2.11/include/SDL_platform.h   C:/Dev-Cpp_Lib/SDL-1.2.11/include/begin_code.h   C:/Dev-Cpp_Lib/SDL-1.2.11/include/close_code.h   C:/Dev-Cpp_Lib/SDL-1.2.11/include/SDL_audio.h   C:/Dev-Cpp_Lib/SDL-1.2.11/include/SDL_error.h   C:/Dev-Cpp_Lib/SDL-1.2.11/include/SDL_endian.h   C:/Dev-Cpp_Lib/SDL-1.2.11/include/SDL_mutex.h   C:/Dev-Cpp_Lib/SDL-1.2.11/include/SDL_thread.h   C:/Dev-Cpp_Lib/SDL-1.2.11/include/SDL_rwops.h   C:/Dev-Cpp_Lib/SDL-1.2.11/include/SDL_cdrom.h   C:/Dev-Cpp_Lib/SDL-1.2.11/include/SDL_cpuinfo.h   C:/Dev-Cpp_Lib/SDL-1.2.11/include/SDL_events.h   C:/Dev-Cpp_Lib/SDL-1.2.11/include/SDL_active.h   C:/Dev-Cpp_Lib/SDL-1.2.11/include/SDL_keyboard.h   C:/Dev-Cpp_Lib/SDL-1.2.11/include/SDL_keysym.h   C:/Dev-Cpp_Lib/SDL-1.2.11/include/SDL_mouse.h   C:/Dev-Cpp_Lib/SDL-1.2.11/include/SDL_video.h   C:/Dev-Cpp_Lib/SDL-1.2.11/include/SDL_joystick.h   C:/Dev-Cpp_Lib/SDL-1.2.11/include/SDL_quit.h   C:/Dev-Cpp_Lib/SDL-1.2.11/include/SDL_loadso.h   C:/Dev-Cpp_Lib/SDL-1.2.11/include/SDL_timer.h   C:/Dev-Cpp_Lib/SDL-1.2.11/include/SDL_version.h   C:/Dev-Cpp_Lib/SDL_image-1.2.5/SDL_image.h   C:/Dev-Cpp_Lib/SDL-1.2.11/include/SDL.h   C:/Dev-Cpp_Lib/SDL-1.2.11/include/SDL_version.h   C:/Dev-Cpp_Lib/SDL-1.2.11/include/begin_code.h   C:/Dev-Cpp_Lib/SDL-1.2.11/include/close_code.h   C:/Dev-Cpp_Lib/SDL_mixer-1.2.7/SDL_mixer.h   C:/Dev-Cpp_Lib/SDL-1.2.11/include/SDL_types.h   C:/Dev-Cpp_Lib/SDL-1.2.11/include/SDL_rwops.h   C:/Dev-Cpp_Lib/SDL-1.2.11/include/SDL_audio.h   C:/Dev-Cpp_Lib/SDL-1.2.11/include/SDL_byteorder.h   C:/Dev-Cpp_Lib/SDL-1.2.11/include/SDL_version.h   C:/Dev-Cpp_Lib/SDL-1.2.11/include/begin_code.h   C:/Dev-Cpp_Lib/SDL-1.2.11/include/close_code.h
+	$(CPP) -c test.cpp -o test.o $(CXXFLAGS)

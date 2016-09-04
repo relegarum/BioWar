@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<STAGE>
+  <ENEMIES>
+    
+    <!--
+      Enemies Types
+      FlyingManthisType = 1,
+      NembrothaType     = 2,
+      RotiferaType      = 3,
+      BossType          = 4 -->
+    
+    <ENEMY>
+      <TYPE>2</TYPE>
+      <HEALTH>60</HEALTH>
+      <DAMAGE>7</DAMAGE>
+      <POSX>100</POSX>
+      <POSY>200</POSY>
+    </ENEMY>
+  
+    <ENEMY>
+      <TYPE>2</TYPE>
+      <HEALTH>60</HEALTH>
+      <DAMAGE>20</DAMAGE>
+      <POSX>70</POSX>
+      <POSY>400</POSY>
+    </ENEMY>
+
+
+    <ENEMY>
+      <TYPE>1</TYPE>
+      <HEALTH>200</HEALTH>
+      <DAMAGE>4</DAMAGE>
+      <POSX>80</POSX>
+      <POSY>900</POSY>
+    </ENEMY>
+
+    <ENEMY>
+      <TYPE>3</TYPE>
+      <HEALTH>300</HEALTH>
+      <DAMAGE>5</DAMAGE>
+      <POSX>780</POSX>
+      <POSY>100</POSY>
+    </ENEMY>
+
+  </ENEMIES>
+</STAGE>
